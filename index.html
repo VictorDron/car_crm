@@ -11,34 +11,35 @@
 <style>
 /* ============================== TOKENS ============================== */
 :root{
-  --brand:#E11226; --brand-600:#C30E20; --brand-700:#9E0B1A; --brand-800:#7A0814;
-  --brand-tint:#FDE7E9; --brand-tint-2:#FBD4D8; --brand-deep:#4E0810;
-  --green:#15A34A; --green-tint:#DCFCE7; --green-ink:#0F7a37;
-  --amber:#E0900B; --amber-tint:#FEF1D6; --amber-ink:#9a6206;
-  --blue:#2563EB; --blue-tint:#DCE7FE; --blue-ink:#1d4ed8;
-  --purple:#7C3AED; --purple-tint:#EDE5FE; --purple-ink:#6022c9;
-  --teal:#0d9488; --teal-tint:#cdf2ee;
+  --brand:#9E241C; --brand-600:#881F18; --brand-700:#6F1A14; --brand-800:#571410;
+  --brand-tint:#F1E7E5; --brand-tint-2:#E2CECA; --brand-deep:#2A100D;
+  --green:#3F7150; --green-tint:#E7EDE8; --green-ink:#33583F;
+  --amber:#946C1E; --amber-tint:#EFE8D6; --amber-ink:#775614;
+  --blue:#3B577F; --blue-tint:#E5E9F0; --blue-ink:#324667;
+  --purple:#515873; --purple-tint:#E8E9ED; --purple-ink:#43495D;
+  --teal:#3C6A64; --teal-tint:#E3EBE9;
 
-  --bg:#F2F3F7; --surface:#FFFFFF; --surface-2:#FAFAFC; --surface-3:#F5F6F9;
-  --ink:#15171F; --ink-2:#39414F; --muted:#727A8C; --faint:#9aa1b1;
-  --line:#E6E8EF; --line-2:#EEF0F5;
-  --shadow-sm:0 1px 2px rgba(20,22,31,.05), 0 1px 3px rgba(20,22,31,.04);
-  --shadow:0 4px 14px rgba(22,24,33,.07), 0 1px 3px rgba(22,24,33,.05);
-  --shadow-lg:0 18px 50px -12px rgba(22,24,33,.22), 0 6px 18px rgba(22,24,33,.08);
-  --shadow-brand:0 10px 26px -8px rgba(225,18,38,.45);
-  --r-xs:7px; --r-sm:10px; --r:13px; --r-lg:18px; --r-xl:24px; --r-pill:999px;
+  --bg:#ECECE7; --surface:#FFFFFF; --surface-2:#F6F5F2; --surface-3:#EFEEE9;
+  --ink:#1A1B1E; --ink-2:#3B3E44; --muted:#6C6F76; --faint:#9A9CA2;
+  --line:#E1E0DA; --line-2:#EAE9E3;
+  --shadow-sm:0 1px 1px rgba(26,27,30,.04);
+  --shadow:0 1px 2px rgba(26,27,30,.05),0 2px 6px rgba(26,27,30,.045);
+  --shadow-lg:0 20px 46px -18px rgba(26,27,30,.26),0 4px 12px rgba(26,27,30,.06);
+  --shadow-brand:0 1px 2px rgba(26,27,30,.12);
+  --r-xs:5px; --r-sm:7px; --r:9px; --r-lg:12px; --r-xl:15px; --r-pill:999px;
   --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   --disp:'Plus Jakarta Sans',var(--sans);
-  --sidebar-w:248px;
+  --sidebar-w:250px;
 }
 [data-theme="dark"]{
-  --bg:#0C0E14; --surface:#161924; --surface-2:#1B1F2C; --surface-3:#1F2433;
-  --ink:#EDEFF5; --ink-2:#C2C7D4; --muted:#8A91A3; --faint:#646b7d;
-  --line:#262B3A; --line-2:#222736;
-  --brand-tint:#2A1014; --brand-tint-2:#3a141a;
-  --green-tint:#10241a; --amber-tint:#2a2110; --blue-tint:#101a2e; --purple-tint:#1d1430; --teal-tint:#0c2422;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow:0 6px 18px rgba(0,0,0,.4);
-  --shadow-lg:0 24px 60px -12px rgba(0,0,0,.6); --shadow-brand:0 10px 26px -8px rgba(225,18,38,.5);
+  --bg:#131315; --surface:#1B1B1E; --surface-2:#202024; --surface-3:#26262B;
+  --ink:#ECECEA; --ink-2:#C0C0BD; --muted:#8B8B87; --faint:#63635F;
+  --line:#2B2B2F; --line-2:#252529;
+  --brand:#C0564C; --brand-600:#AD4A41; --brand-700:#984036;
+  --brand-tint:#2A1512; --brand-tint-2:#3A1B16;
+  --green-tint:#17241b; --amber-tint:#26200f; --blue-tint:#161f2c; --purple-tint:#20212c; --teal-tint:#122421;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow:0 6px 16px rgba(0,0,0,.4);
+  --shadow-lg:0 24px 56px -14px rgba(0,0,0,.6); --shadow-brand:0 1px 2px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
@@ -78,7 +79,7 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .shell{display:grid;grid-template-columns:var(--sidebar-w) 1fr;height:100vh;overflow:hidden}
 .sidebar{background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
 .sb-brand{padding:18px 18px 14px;display:flex;align-items:center;gap:11px}
-.logo{width:36px;height:36px;border-radius:11px;background:linear-gradient(145deg,var(--brand),var(--brand-700));display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-brand);flex:none}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--brand);display:flex;align-items:center;justify-content:center;flex:none}
 .logo svg{width:21px;height:21px}
 .sb-brand .name{font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:-.03em}
 .sb-brand .tag{font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-top:1px}
@@ -104,7 +105,26 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .nav-item.on .nb{background:rgba(255,255,255,.22);color:#fff}
 .sb-foot{padding:10px 14px;border-top:1px solid var(--line)}
 .userchip{display:flex;align-items:center;gap:10px;padding:7px;border-radius:11px;cursor:pointer;transition:.13s}
-.userchip:hover{background:var(--surface-3)}
+.userchip:hover{background:rgba(255,255,255,.06)}
+/* --- sober graphite sidebar (both themes) --- */
+.sidebar{background:#191A1D;border-right-color:#27282C;color:#B6B8BD}
+.sb-brand .name{color:#F5F5F2}
+.sb-brand .tag{color:#83858B}
+.sb-brand .logo{box-shadow:none}
+.store-btn{background:#212227;border-color:#2E2F33}
+.store-btn:hover{background:#26272C;border-color:var(--brand)}
+.store-btn .lbl{color:#F1F1EF}
+.store-btn .sub{color:#83858B}
+.nav-sec{color:#6A6C72}
+.nav-item{color:#B6B8BD}
+.nav-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.nav-item.on{background:var(--brand);color:#fff;box-shadow:none}
+.nav-item .nb{background:rgba(255,255,255,.10);color:#D6D7DA}
+.nav-item.on .nb{background:rgba(255,255,255,.20);color:#fff}
+.sb-foot{border-top-color:#27282C}
+.userchip .fw7{color:#F1F1EF}
+.userchip .muted{color:#83858B}
+.store-menu{color:var(--ink)}
 
 .main{display:flex;flex-direction:column;overflow:hidden}
 .topbar{height:62px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(10px);display:flex;align-items:center;gap:16px;padding:0 24px;flex:none;position:sticky;top:0;z-index:30}
@@ -139,7 +159,7 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:var(--r);transition:.15s;white-space:nowrap;border:1px solid transparent}
 .btn svg{width:16px;height:16px}
 .btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-brand)}
-.btn-primary:hover{background:var(--brand-600);transform:translateY(-1px)}
+.btn-primary:hover{background:var(--brand-600)}
 .btn-ghost{background:var(--surface);border-color:var(--line);color:var(--ink-2)}
 .btn-ghost:hover{border-color:var(--faint);color:var(--ink);background:var(--surface-2)}
 .btn-soft{background:var(--brand-tint);color:var(--brand-700)}
@@ -163,8 +183,8 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .divider{height:1px;background:var(--line-2);margin:14px 0}
 .prog{height:7px;background:var(--surface-3);border-radius:99px;overflow:hidden}
 .prog > i{display:block;height:100%;border-radius:99px;background:var(--brand)}
-.iawrap{background:linear-gradient(135deg,var(--purple-tint),transparent);border:1px solid var(--purple-tint)}
-.ia-badge{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;color:var(--purple-ink);background:var(--purple-tint);padding:3px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.06em}
+.iawrap{background:var(--surface);border:1px solid var(--line);border-left:2px solid var(--brand)}
+.ia-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;color:var(--ink-2);background:var(--surface-3);padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.08em}
 
 /* grids */
 .grid{display:grid;gap:18px}
@@ -200,22 +220,22 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 
 /* ============================== LOGIN ============================== */
 .login{display:grid;grid-template-columns:1.05fr .95fr;height:100vh;overflow:hidden}
-.login-hero{background:radial-gradient(120% 120% at 0% 0%,var(--brand) 0%,var(--brand-700) 42%,var(--brand-deep) 100%);color:#fff;padding:54px 56px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.login-hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 0);background-size:26px 26px;opacity:.6}
-.lh-glow{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 65%);bottom:-160px;right:-120px}
+.login-hero{background:#17181B;color:#E7E7E4;padding:56px 58px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.login-hero::after{display:none}
+.lh-glow{display:none}
 .login-hero > *{position:relative;z-index:1}
 .lh-brand{display:flex;align-items:center;gap:12px;margin-bottom:auto}
-.lh-brand .logo{background:rgba(255,255,255,.16);box-shadow:none}
-.lh-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-bottom:18px}
-.lh-title{font-size:50px;font-weight:800;line-height:1.04;letter-spacing:-.035em;margin-bottom:22px}
-.lh-title .y{color:#FFD7B0;background:linear-gradient(90deg,#FFE3B0,#FFB199);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.lh-desc{font-size:16px;line-height:1.6;color:rgba(255,255,255,.9);max-width:440px;margin-bottom:34px}
-.lh-feats{display:grid;grid-template-columns:1fr 1fr;gap:13px;max-width:480px}
-.lh-feat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:14px 15px;backdrop-filter:blur(4px)}
-.lh-feat .lf-ic{font-size:18px;margin-bottom:7px}
-.lh-feat h4{font-size:13.5px;margin-bottom:3px}
-.lh-feat p{font-size:11.5px;color:rgba(255,255,255,.78);line-height:1.45}
-.lh-foot{margin-top:auto;font-size:12px;color:rgba(255,255,255,.65);padding-top:30px}
+.lh-brand .logo{background:var(--brand);box-shadow:none}
+.lh-eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8C8E94;margin-bottom:20px}
+.lh-title{font-size:43px;font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:22px;color:#F4F4F1}
+.lh-title .y{color:#BE594F;-webkit-text-fill-color:currentColor;background:none}
+.lh-desc{font-size:15.5px;line-height:1.62;color:#A9ABAF;max-width:452px;margin-bottom:36px}
+.lh-feats{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:490px}
+.lh-feat{background:#202126;border:1px solid #2B2C31;border-radius:var(--r);padding:15px 16px}
+.lh-feat .lf-ic{color:#BE594F;margin-bottom:10px;display:inline-flex}
+.lh-feat h4{font-size:13.5px;margin-bottom:3px;color:#EAEAE8;font-weight:700}
+.lh-feat p{font-size:11.5px;color:#8B8D93;line-height:1.5}
+.lh-foot{margin-top:auto;font-size:12px;color:#75777D;padding-top:30px}
 .login-panel{display:flex;align-items:center;justify-content:center;padding:40px;background:var(--surface);overflow-y:auto}
 .login-form{width:100%;max-width:380px}
 .login-form h2{font-size:28px;margin-bottom:6px}
@@ -227,7 +247,7 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .split{display:flex;align-items:center;text-align:center;gap:12px;margin:26px 0 18px;color:var(--faint);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .split::before,.split::after{content:"";flex:1;height:1px;background:var(--line)}
 .persona{display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px solid var(--line);border-radius:var(--r);margin-bottom:9px;cursor:pointer;transition:.14s}
-.persona:hover{border-color:var(--brand-tint-2);background:var(--brand-tint);transform:translateX(2px)}
+.persona:hover{border-color:var(--brand-tint-2);background:var(--brand-tint)}
 .persona .pa-meta{flex:1}
 .persona .pa-name{font-weight:700;font-size:13.5px}
 .persona .pa-role{font-size:11.5px;color:var(--muted)}
@@ -273,9 +293,10 @@ svg[viewBox="0 0 24 24"]{width:18px;height:18px;flex:none;display:inline-block;v
 .x-btn:hover{background:var(--surface-3);color:var(--ink)}
 
 /* vehicle photo */
-.vphoto{border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:34px;flex:none;position:relative;overflow:hidden}
-.vphoto .vp-fade{position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.22),transparent 60%)}
-.vphoto .vp-em{position:relative;filter:drop-shadow(0 4px 8px rgba(0,0,0,.18))}
+.vphoto{background:var(--surface-3);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;flex:none;position:relative;overflow:hidden;color:var(--faint)}
+.vphoto svg{width:30px;height:30px}
+.vphoto-lg svg{width:48px;height:48px}
+.vphoto-mk{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
 
 /* segmented */
 .seg{display:flex;gap:3px;background:var(--surface-3);padding:3px;border-radius:10px}
@@ -385,7 +406,7 @@ const pct=n=>n.toFixed(0)+'%';
 const initials=n=>n.split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function toast(msg,sub){const t=$('#toast');t.innerHTML='<span class="ti">'+I.check+'</span><div>'+esc(msg)+(sub?'<div style="font-weight:400;font-size:11.5px;opacity:.8">'+esc(sub)+'</div>':'')+'</div>';t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2600);}
-const avColors=['#E11226','#2563EB','#7C3AED','#0d9488','#E0900B','#15A34A','#db2777','#0891b2','#65a30d','#9333ea'];
+const avColors=['#8F433B','#41597A','#5A6072','#41695F','#8A6A3A','#4E6B54','#6E4A55','#3F6470','#5E6647','#6A5470'];
 function avColor(name){let h=0;for(const c of name)h=(h*31+c.charCodeAt(0))>>>0;return avColors[h%avColors.length];}
 function avatar(name,cls=''){const c=avColor(name);return '<div class="avatar '+cls+'" style="background:'+c+'">'+initials(name)+'</div>';}
 function deltaTag(v,unit='%'){const up=v>=0;return '<span class="kdelta" style="color:'+(up?'var(--green-ink)':'var(--brand-700)')+'">'+(up?'▲':'▼')+' '+Math.abs(v).toString().replace('.',',')+unit+'</span>';}
@@ -411,8 +432,7 @@ const VEND=[
 const vNome=id=>(VEND.find(v=>v.id===id)||{}).nome||'—';
 
 /* body emoji + gradient by type */
-const BODY={sedan:{em:'🚗',g:['#e3edff','#c5d8ff']},suv:{em:'🚙',g:['#ffe7d6','#ffd0b0']},hatch:{em:'🚘',g:['#e7f6e9','#cdeed3']},pickup:{em:'🛻',g:['#ede4ff','#d9c8ff']},sport:{em:'🏎️',g:['#ffe1e5','#ffc6cd']}};
-function vphoto(v,size=64){const b=BODY[v.tipo]||BODY.sedan;const g=b.g;return '<div class="vphoto" style="width:'+size+'px;height:'+Math.round(size*.72)+'px;background:linear-gradient(150deg,'+g[0]+','+g[1]+')"><div class="vp-fade"></div><span class="vp-em" style="font-size:'+Math.round(size*.5)+'px">'+b.em+'</span></div>';}
+function vphoto(v,size=64){const pct=size==='100%';const w=pct?'100%':(size+'px');const h=pct?'148px':(Math.round(size*0.66)+'px');return '<div class="vphoto'+(pct?' vphoto-lg':'')+'" style="width:'+w+';height:'+h+'">'+I.car+'<span class="vphoto-mk">'+esc(v.marca)+'</span></div>';}
 
 const VEIC=[
   {id:'v1',marca:'Honda',modelo:'Civic',versao:'EXL 2.0',ano:'2022/2023',tipo:'sedan',km:34200,placa:'RKA2B34',cor:'Cinza',preco:159900,fipe:162400,custo:138000,status:'disponivel',loja:'centro',dias:18,portais:['olx','webmotors','ml'],fotos:14},
@@ -502,11 +522,11 @@ const DETRATORES=[
 
 /* tarefas / pendências do dia */
 const PEND=[
-  {ic:'🔁',cls:'t-red',tit:'3 clientes entram na janela de troca esta semana',sub:'Financiamento terminando em 2–3 meses · disparar campanha de recompra',act:'recompra'},
-  {ic:'📥',cls:'t-blue',tit:'2 leads novos aguardando triagem',sub:'Thiago Nunes (Webmotors) e Gustavo Reis (WhatsApp) · do Agente IA',act:'leads'},
-  {ic:'🚗',cls:'t-purple',tit:'Test-drive · Marcos Pereira — Hilux SRX',sub:'Hoje 16h · confirmar veículo e placa de teste',act:'funil'},
-  {ic:'📄',cls:'t-amber',tit:'Documentação · Henrique Dantas — Creta',sub:'Despachante aguardando CRLV e comprovante de residência',act:'funil'},
-  {ic:'📞',cls:'t-gray',tit:'Follow-up · Juliana Castro esfriando',sub:'5 meses sem contato · NPS 6 · oferta de revisão cortesia',act:'clientes'},
+  {ic:I.swap,tit:'3 clientes entram na janela de troca esta semana',sub:'Financiamento terminando em 2–3 meses · disparar campanha de recompra',act:'recompra'},
+  {ic:I.robot,tit:'2 leads novos aguardando triagem',sub:'Thiago Nunes (Webmotors) e Gustavo Reis (WhatsApp) · do Agente IA',act:'leads'},
+  {ic:I.car,tit:'Test-drive · Marcos Pereira — Hilux SRX',sub:'Hoje 16h · confirmar veículo e placa de teste',act:'funil'},
+  {ic:I.doc,tit:'Documentação · Henrique Dantas — Creta',sub:'Despachante aguardando CRLV e comprovante de residência',act:'funil'},
+  {ic:I.phone,tit:'Follow-up · Juliana Castro esfriando',sub:'5 meses sem contato · NPS 6 · oferta de revisão cortesia',act:'clientes'},
 ];
 const ALERTAS=[
   {ic:I.swap,c:'var(--brand)',cls:'t-red',tit:'Recompra antecipada',txt:'Fernanda Lima quita o Nivus em ~3 meses. Histórico mostra troca a cada 4 anos — abordar agora.'},
@@ -592,10 +612,10 @@ function viewLogin(){
       +'<h1 class="lh-title">Não vende uma&nbsp;vez.<br><span class="y">Cuida até a próxima troca.</span></h1>'
       +'<p class="lh-desc">Do lead que chega do portal ao cliente que financiou em 48× e está pronto para trocar de carro. Funil, estoque, WhatsApp oficial e um agente de IA que avisa a hora certa de reabordar — em três lojas, numa tela só.</p>'
       +'<div class="lh-feats">'
-        +'<div class="lh-feat"><div class="lf-ic">🔁</div><h4>Radar de recompra</h4><p>A IA acompanha o fim do financiamento e abre a janela de troca.</p></div>'
-        +'<div class="lh-feat"><div class="lf-ic">📊</div><h4>Funil que ensina</h4><p>Travas de campo guiam o vendedor pela boa prática.</p></div>'
-        +'<div class="lh-feat"><div class="lf-ic">💬</div><h4>WhatsApp oficial</h4><p>API da Meta com histórico vinculado ao cliente.</p></div>'
-        +'<div class="lh-feat"><div class="lf-ic">🚗</div><h4>Estoque vivo</h4><p>FIPE, dias parados e portais sincronizados.</p></div>'
+        +'<div class="lh-feat"><div class="lf-ic">'+I.swap+'</div><h4>Radar de recompra</h4><p>A IA acompanha o fim do financiamento e abre a janela de troca.</p></div>'
+        +'<div class="lh-feat"><div class="lf-ic">'+I.funnel+'</div><h4>Funil que ensina</h4><p>Travas de campo guiam o vendedor pela boa prática.</p></div>'
+        +'<div class="lh-feat"><div class="lf-ic">'+I.chat+'</div><h4>WhatsApp oficial</h4><p>API da Meta com histórico vinculado ao cliente.</p></div>'
+        +'<div class="lh-feat"><div class="lf-ic">'+I.car+'</div><h4>Estoque vivo</h4><p>FIPE, dias parados e portais sincronizados.</p></div>'
       +'</div>'
       +'<div class="lh-foot">© Grupo Windcar · 2026 — mock de demonstração</div>'
     +'</div>'
@@ -662,13 +682,13 @@ VIEWS.dashboard=function(){
 
   /* próximas entregas / test-drives */
   const agenda=[
-    {d:'HOJE',h:'16:00',ic:'🚗',tit:'Test-drive · Hilux SRX',sub:'Marcos Pereira · Loja ABC'},
-    {d:'HOJE',h:'18:30',ic:'📦',tit:'Entrega · Corolla XEi',sub:'Vanessa Pinto · Loja Centro'},
-    {d:'AMANHÃ',h:'10:00',ic:'📝',tit:'Assinatura · Creta Limited',sub:'Henrique Dantas · Loja ABC'},
-    {d:'01 JUL',h:'14:00',ic:'🔍',tit:'Avaliação de usado',sub:'HR-V do Sr. Eduardo · Loja Centro'},
+    {d:'HOJE',h:'16:00',ic:I.car,tit:'Test-drive · Hilux SRX',sub:'Marcos Pereira · Windcar ABC'},
+    {d:'HOJE',h:'18:30',ic:I.check,tit:'Entrega · Corolla XEi',sub:'Vanessa Pinto · Windcar Centro'},
+    {d:'AMANHÃ',h:'10:00',ic:I.doc,tit:'Assinatura · Creta Limited',sub:'Henrique Dantas · Windcar ABC'},
+    {d:'01 JUL',h:'14:00',ic:I.search,tit:'Avaliação de usado',sub:'HR-V do Sr. Eduardo · Windcar Centro'},
   ];
   const agendaHtml=agenda.map(a=>'<div class="lrow"><div style="width:46px" class="col aic"><div class="fs10 fw7 muted up">'+a.d+'</div><div class="fw7 fs13">'+a.h+'</div></div>'
-    +'<div style="width:34px;height:34px;border-radius:10px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;font-size:17px">'+a.ic+'</div>'
+    +'<div style="width:34px;height:34px;border-radius:var(--r);background:var(--surface-3);display:flex;align-items:center;justify-content:center;color:var(--ink-2)">'+a.ic+'</div>'
     +'<div style="flex:1"><div class="fw6 fs13">'+a.tit+'</div><div class="fs11 muted">'+a.sub+'</div></div></div>').join('');
 
   return '<div class="page">'
@@ -680,7 +700,7 @@ VIEWS.dashboard=function(){
     /* pendências */
     +'<div class="card" style="margin-bottom:18px;overflow:hidden">'
       +'<div class="card-h"><div><h3>Minhas pendências · o que precisa da sua atenção hoje</h3><div class="ch-sub">As travas do funil sinalizam onde os negócios não avançam</div></div><span class="tag t-red">'+PEND.length+' pendências</span></div>'
-      +PEND.map(p=>'<div class="lrow click" data-nav="'+p.act+'"><div style="width:38px;height:38px;border-radius:11px;background:var(--surface-3);display:flex;align-items:center;justify-content:center;font-size:19px">'+p.ic+'</div>'
+      +PEND.map(p=>'<div class="lrow click" data-nav="'+p.act+'"><div style="width:38px;height:38px;border-radius:var(--r);background:var(--surface-3);display:flex;align-items:center;justify-content:center;color:var(--ink-2)">'+p.ic+'</div>'
         +'<div style="flex:1"><div class="fw6 fs13.5">'+p.tit+'</div><div class="fs12 muted">'+p.sub+'</div></div>'
         +'<span style="color:var(--faint)">'+I.arrow+'</span></div>').join('')
     +'</div>'
@@ -739,7 +759,7 @@ VIEWS.funil=function(){
   return '<div class="page" style="max-width:none">'
     +'<div class="page-head"><div><h1>Funil de Vendas</h1><div class="sub">'+negs.filter(n=>n.etapa!=='vendido').length+' negócios em jogo · '+fmtK(totalPipe)+' em pipeline aberto · arraste os cards entre as etapas</div></div>'
     +'<div class="row gap10"><div class="funil-tabs"><div class="funil-tab on">Comercial</div><div class="funil-tab" data-nav="posvenda">Pós-venda</div></div><button class="btn btn-primary" data-act="novoNegocio">'+I.plus+'Novo negócio</button></div></div>'
-    +'<div class="card iawrap pad" style="margin-bottom:16px"><div class="row gap10"><span style="font-size:20px">🎯</span><div class="fs13"><b>Território do vendedor.</b> <span class="muted">Cards com cadeado têm campos obrigatórios pendentes — a trava impede o avanço. Arraste para mudar de etapa; a IA recalcula o score de fechamento.</span></div></div></div>'
+    +'<div class="card iawrap pad" style="margin-bottom:16px"><div class="row gap10"><span style="color:var(--brand);display:inline-flex">'+I.funnel+'</span><div class="fs13"><b>Território do vendedor.</b> <span class="muted">Cards com cadeado têm campos obrigatórios pendentes — a trava impede o avanço. Arraste para mudar de etapa; a IA recalcula o score de fechamento.</span></div></div></div>'
     +'<div class="board">'+cols+'</div>'
   +'</div>';
 };
@@ -1359,7 +1379,7 @@ VIEWS.whatsapp = function(){
           +'<div class="muted fs12 clip" style="flex:1">'+esc(c.snippet)+'</div>'
           +(c.unread?'<span class="tag t-red" style="min-width:18px;text-align:center">'+c.unread+'</span>':'')
         +'</div>'
-        +(c.ia?'<div style="margin-top:4px"><span class="tag t-purple fs11">✨ IA qualificou</span></div>':'')
+        +(c.ia?'<div style="margin-top:4px"><span class="tag t-purple fs11">IA qualificou</span></div>':'')
       +'</div></div>';
   }).join('');
 
@@ -1370,7 +1390,7 @@ VIEWS.whatsapp = function(){
     var bg = out?'var(--brand)':'var(--surface-3)';
     var col = out?'#fff':'var(--ink)';
     var align = out?'flex-end':'flex-start';
-    var iaTag = (out&&m.ia)?'<div class="row" style="justify-content:flex-end;margin-bottom:3px"><span class="tag t-purple fs11">✨ Agente IA</span></div>':'';
+    var iaTag = (out&&m.ia)?'<div class="row" style="justify-content:flex-end;margin-bottom:3px"><span class="tag t-purple fs11">Agente IA</span></div>':'';
     return '<div style="display:flex;flex-direction:column;align-items:'+align+'">'
       +iaTag
       +'<div style="max-width:70%;padding:9px 12px;border-radius:14px;background:'+bg+';color:'+col+';font-size:13px;line-height:1.45;'
@@ -1921,7 +1941,7 @@ window.novoNegocioHtml=function(){
     +'<div class="field"><label>Etapa inicial</label><select class="inp" id="nn-etapa">'+etapaOpts+'</select></div>'
     +'<div class="field"><label>Origem</label><select class="inp" id="nn-origem">'+origemOpts+'</select></div>'
     +'</div>'
-    +'<label class="lrow click" style="cursor:pointer;margin-top:4px"><input type="checkbox" id="nn-quente"><div class="grow fs13 fw6">🔥 Marcar como quente</div><span class="fs12 muted">prioriza no funil</span></label>'
+    +'<label class="lrow click" style="cursor:pointer;margin-top:4px"><input type="checkbox" id="nn-quente"><div class="grow fs13 fw6">Marcar como negócio quente</div><span class="fs12 muted">prioriza no funil</span></label>'
     +'<div class="row gap8" style="margin-top:16px"><button class="btn btn-ghost grow" data-close>Cancelar</button><button class="btn btn-primary grow" data-act="criarNeg">'+I.plus+'Criar negócio</button></div>'
     +'</div>';
 };
@@ -1970,7 +1990,7 @@ function wireKanban(){
           toast('Negócio travado','Resolva '+n.locks.length+' campo(s) obrigatório(s) antes de avançar');
         }else{
           n.etapa=target;
-          if(target==='vendido')toast('🎉 Venda registrada!',n.cliente+' · '+fmtK(n.valor));
+          if(target==='vendido')toast('Venda registrada',n.cliente+' · '+fmtK(n.valor));
           else toast('Negócio movido para '+etapaNome(target));
           render();
         }
